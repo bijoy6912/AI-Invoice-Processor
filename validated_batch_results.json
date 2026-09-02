@@ -1,0 +1,104 @@
+[
+    {
+        "vendor_name": "TECHNOVA SOLUTIONS",
+        "invoice_number": "INV-2026-001",
+        "invoice_date": "September 2, 2026",
+        "due_date": "September 16, 2026",
+        "customer_name": "Acme Digital LLC",
+        "line_items": [
+            {
+                "description": "AI Document Processing Setup",
+                "quantity": 1,
+                "unit_price": 500.0,
+                "amount": 500.0
+            },
+            {
+                "description": "Invoice Data Extraction",
+                "quantity": 10,
+                "unit_price": 25.0,
+                "amount": 250.0
+            },
+            {
+                "description": "Monthly Support",
+                "quantity": 1,
+                "unit_price": 100.0,
+                "amount": 100.0
+            }
+        ],
+        "subtotal": 850.0,
+        "tax": 68.0,
+        "total": 918.0,
+        "source_file": "invoice_001.pdf",
+        "validation_status": "VALID",
+        "validation_errors": [],
+        "validation_warnings": []
+    },
+    {
+        "vendor_name": "TECHNOVA SOLUTIONS",
+        "invoice_number": "INV-2026-001",
+        "invoice_date": "September 2, 2026",
+        "due_date": "September 16, 2026",
+        "customer_name": "Acme Digital LLC",
+        "line_items": [
+            {
+                "description": "AI Document Processing Setup",
+                "quantity": 1,
+                "unit_price": 500.0,
+                "amount": 500.0
+            },
+            {
+                "description": "Invoice Data Extraction",
+                "quantity": 10,
+                "unit_price": 25.0,
+                "amount": 250.0
+            },
+            {
+                "description": "Monthly Support",
+                "quantity": 1,
+                "unit_price": 100.0,
+                "amount": 100.0
+            }
+        ],
+        "subtotal": 850.0,
+        "tax": 68.0,
+        "total": 918.0,
+        "source_file": "invoice_002.pdf",
+        "validation_status": "VALID",
+        "validation_errors": [],
+        "validation_warnings": []
+    },
+    {
+        "vendor_name": "TECHNOVA SOLUTIONS",
+        "invoice_number": "INV-2026-001",
+        "invoice_date": "September 2, 2026",
+        "due_date": "September 16, 2026",
+        "customer_name": "Acme Digital LLC",
+        "line_items": [
+            {
+                "description": "AI Document Processing Setup",
+                "quantity": 1,
+                "unit_price": 500.0,
+                "amount": 500.0
+            },
+            {
+                "description": "Invoice Data Extraction",
+                "quantity": 10,
+                "unit_price": 25.0,
+                "amount": 250.0
+            },
+            {
+                "description": "Monthly Support",
+                "quantity": 1,
+                "unit_price": 100.0,
+                "amount": 100.0
+            }
+        ],
+        "subtotal": 850.0,
+        "tax": 68.0,
+        "total": 918.0,
+        "source_file": "invoice_003.pdf",
+        "validation_status": "VALID",
+        "validation_errors": [],
+        "validation_warnings": []
+    }
+]
