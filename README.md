@@ -44,3 +44,9 @@ Structured JSON
 Validation
     ↓
 Excel Report
+
+## Excel Report Preview
+
+The processed invoice data is exported into a structured Excel report with validation status, currency formatting, and filterable columns.
+
+![Invoice Batch Excel Report](screenshots/invoice-report.png)

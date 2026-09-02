@@ -1,6 +1,6 @@
 import json
 from openpyxl import Workbook
-from openpyxl.styles import Font
+from openpyxl.styles import Font, PatternFill, Alignment
 
 
 # Load validated batch results
@@ -34,8 +34,16 @@ sheet.append(headers)
 
 
 # Make headers bold
+# Format headers
+header_fill = PatternFill(
+    fill_type="solid",
+    fgColor="D9EAF7"
+)
+
 for cell in sheet[1]:
     cell.font = Font(bold=True)
+    cell.fill = header_fill
+    cell.alignment = Alignment(horizontal="center", vertical="center")
 
 
 # Add invoice rows
@@ -72,6 +80,19 @@ for column in sheet.columns:
 
     sheet.column_dimensions[column_letter].width = min(max_length + 2, 40)
 
+    # Ensure currency columns have enough width
+sheet.column_dimensions["G"].width = 14
+sheet.column_dimensions["H"].width = 14
+sheet.column_dimensions["I"].width = 14
+
+# Format currency columns
+for row in range(2, sheet.max_row + 1):
+    sheet[f"G{row}"].number_format = '$#,##0.00'
+    sheet[f"H{row}"].number_format = '$#,##0.00'
+    sheet[f"I{row}"].number_format = '$#,##0.00'
+
+# Enable filters
+sheet.auto_filter.ref = sheet.dimensions
 
 # Freeze header row
 sheet.freeze_panes = "A2"
