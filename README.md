@@ -1,52 +1,50 @@
 # AI Invoice Processor
 
-AI-powered invoice extraction, validation, OCR, and Excel reporting.
-
-## What This Project Does
-
-This project extracts structured data from invoice PDFs using OCR and Gemini AI.
-
-It can:
-
-- Extract invoice details from PDF invoices
-- Process scanned/image-based invoices using OCR
-- Convert invoice data into structured JSON
-- Validate invoice calculations
-- Process multiple invoices in batch
-- Export validated results to Excel
-- Handle temporary AI API failures with automatic retries
-
-## Technology Stack
-
-- Python
-- PyMuPDF
-- Tesseract OCR
-- Gemini AI
-- OpenPyXL
-- JSON
-- Excel
+AI-powered invoice processing workflow that converts PDF invoices into structured data, validates invoice calculations, detects exceptions, and generates Excel reports.
 
 ## Workflow
 
+PDF → OCR → Gemini AI → Structured JSON → Validation → Excel
+
+## Features
+
+- PDF invoice processing
+- OCR for scanned/image-based invoices
+- AI-powered invoice data extraction
+- Structured JSON output
+- Invoice calculation validation
+- Exception and error detection
+- Single invoice processing
+- Batch invoice processing
+- Excel report generation
+- REVIEW REQUIRED status for problematic invoices
+- Windows desktop GUI
+- Standalone Windows `.exe` deployment
+
+## Invoice Data Extracted
+
+The system can extract:
+
+- Vendor name
+- Invoice number
+- Invoice date
+- Due date
+- Customer name
+- Line items
+- Quantity
+- Unit price
+- Amount
+- Subtotal
+- Tax
+- Total
+
+## Validation
+
+The system validates invoice calculations such as:
+
 ```text
-Invoice PDF
-    ↓
-PyMuPDF
-    ↓
-Tesseract OCR
-    ↓
-Raw OCR Text
-    ↓
-Gemini AI
-    ↓
-Structured JSON
-    ↓
-Validation
-    ↓
-Excel Report
+Quantity × Unit Price = Amount
 
-## Excel Report Preview
+Line Items Total = Subtotal
 
-The processed invoice data is exported into a structured Excel report with validation status, currency formatting, and filterable columns.
-
-![Invoice Batch Excel Report](screenshots/invoice-report.png)
+Subtotal + Tax = Total
