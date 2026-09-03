@@ -72,7 +72,7 @@ The desktop application processes invoice PDFs using OCR and Gemini AI.
 
 The generated Excel report contains extracted invoice data, validation status, errors, and warnings.
 
-![Invoice Excel Report](screenshots/invoice_excel_report.png)
+![Invoice Excel Report](screenshots/invoice-report.png)
 
 ## Processing Modes
 
