@@ -40,14 +40,25 @@ The system can extract:
 
 ## Validation
 
+The system validates invoice calculations such as:
+
+~~~text
+Quantity × Unit Price = Amount
+
+Line Items Total = Subtotal
+
+Subtotal + Tax = Total
+~~~
+
 If a calculation does not match, the invoice is marked as:
 
 **REVIEW REQUIRED**
 
 Example:
 
-```text
+~~~text
 Line item 1: quantity × unit price does not match amount.
+~~~
 
 ## Screenshots
 
@@ -94,5 +105,66 @@ The generated Excel report contains:
 
 ### Valid Invoice
 
-```text
+~~~text
 Status: VALID
+~~~
+
+### Invoice With Calculation Error
+
+~~~text
+Status: REVIEW REQUIRED
+~~~
+
+The system does not silently accept calculation inconsistencies. Problematic invoices are flagged for human review.
+
+## Technology
+
+- Python
+- Tesseract OCR
+- Google Gemini API
+- PyMuPDF
+- Tkinter
+- OpenPyXL
+- PyInstaller
+
+## Architecture
+
+~~~text
+PDF Invoice
+    ↓
+OCR
+    ↓
+Gemini AI Extraction
+    ↓
+Structured JSON
+    ↓
+Invoice Validation
+    ↓
+Excel Report
+~~~
+
+## Windows Application
+
+The project can be packaged as a standalone Windows `.exe` application using PyInstaller.
+
+The application provides a desktop GUI for:
+
+- Selecting invoice PDFs
+- Processing individual invoices
+- Processing multiple invoices
+- Viewing processing status
+- Opening the generated Excel report
+
+## API Key
+
+The application requires a Gemini API key.
+
+For client deployment, each client should use their own Gemini API key.
+
+The API key should never be committed to GitHub or embedded directly into the application source code.
+
+## Project Purpose
+
+This is a self-initiated portfolio project demonstrating practical AI document processing, invoice extraction, validation, exception detection, and Excel automation.
+
+The goal is to automate repetitive invoice processing tasks while keeping validation and human review in the workflow.
