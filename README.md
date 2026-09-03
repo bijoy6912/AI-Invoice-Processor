@@ -40,11 +40,11 @@ The system can extract:
 
 ## Validation
 
-The system validates invoice calculations such as:
+If a calculation does not match, the invoice is marked as:
+
+**REVIEW REQUIRED**
+
+Example:
 
 ```text
-Quantity × Unit Price = Amount
-
-Line Items Total = Subtotal
-
-Subtotal + Tax = Total
+Line item 1: quantity × unit price does not match amount.
