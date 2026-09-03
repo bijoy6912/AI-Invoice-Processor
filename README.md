@@ -48,3 +48,17 @@ Quantity × Unit Price = Amount
 Line Items Total = Subtotal
 
 Subtotal + Tax = Total
+
+## Screenshots
+
+### Invoice Processing GUI
+
+The desktop application processes invoice PDFs using OCR and Gemini AI.
+
+![AI Invoice Processor GUI](screenshots/invoice_processor_gui.png)
+
+### Excel Validation Report
+
+The generated Excel report contains extracted invoice data, validation status, errors, and warnings.
+
+![Invoice Excel Report](screenshots/invoice_excel_report.png)
