@@ -48,3 +48,51 @@ Example:
 
 ```text
 Line item 1: quantity × unit price does not match amount.
+
+## Screenshots
+
+### Invoice Processing GUI
+
+The desktop application processes invoice PDFs using OCR and Gemini AI.
+
+![AI Invoice Processor GUI](screenshots/invoice_processor_gui.png)
+
+### Excel Validation Report
+
+The generated Excel report contains extracted invoice data, validation status, errors, and warnings.
+
+![Invoice Excel Report](screenshots/invoice_excel_report.png)
+
+## Processing Modes
+
+### Single Invoice
+
+Select one PDF invoice and process it through the complete workflow.
+
+### Batch Processing
+
+Select multiple PDF invoices and process them together. The system generates an Excel report containing the extracted data and validation results.
+
+## Output
+
+The generated Excel report contains:
+
+- Source File
+- Invoice Number
+- Vendor
+- Customer
+- Invoice Date
+- Due Date
+- Subtotal
+- Tax
+- Total
+- Status
+- Errors
+- Warnings
+
+## Example Results
+
+### Valid Invoice
+
+```text
+Status: VALID
